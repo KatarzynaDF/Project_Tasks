@@ -49,13 +49,13 @@ public class TaskController{
         return taskMapper.mapToTaskDto(service.getTask(taskId));
 }
 
-    @RequestMapping(method = RequestMethod.PUT, value = "updateTask")
+  @RequestMapping(method = RequestMethod.PUT, value = "updateTask")
     public TaskDto updateTaskWithId(@RequestBody TaskDto taskDto) {
-        return taskMapper.mapToTaskDto(service.saveTask(taskMapper.mapToTask(taskDto)));
+       return taskMapper.mapToTaskDto(service.saveTask(taskMapper.mapToTask(taskDto)));
     }
 
-    @RequestMapping(method = RequestMethod.DELETE, value = "deleteTask")
+
    public void deleteTaskwithId(@RequestParam Long taskId) {
-        taskMapper.mapToTaskDto(service.deleteTask(taskId));
+        deleteTask(taskId);
     }
 }
