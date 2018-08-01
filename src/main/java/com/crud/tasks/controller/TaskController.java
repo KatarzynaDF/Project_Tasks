@@ -34,10 +34,10 @@ public class TaskController{
     public void deleteTask(Long taskId) {
     }
 
-   @RequestMapping(method = RequestMethod.PUT, value = "updateTask")
-    public TaskDto updateTask(TaskDto taskDto) {
-        return new TaskDto(1L, "Edited test title", "Test_content");
-    }
+  // @RequestMapping(method = RequestMethod.PUT, value = "updateTask")
+    //public TaskDto updateTask(TaskDto taskDto) {
+      //  return new TaskDto(1L, "Edited test title", "Test_content");
+    //}
 
     @RequestMapping(method = RequestMethod.POST, value = "createTask")
     public void createTask(TaskDto taskDto) {
