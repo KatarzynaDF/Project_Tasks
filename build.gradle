@@ -36,7 +36,7 @@ dependencies{
     compile('org.projectlombok:lombok')
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
     //compile('mysql:mysql-connector-java')
-	compile('tomcat/lib')
+	providedCompile 'org.apache.tomcat:tomcat-catalina:7.0.47'
     testCompile('org.springframework.boot:spring-boot-starter-test')
 
 	compile('javax.xml.bind:jaxb-api:2.3.0')
