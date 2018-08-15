@@ -8,9 +8,12 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+
 @RestController
 @RequestMapping("/v1/task")
+@CrossOrigin(origins = "*")
 public class TaskController{
+
     @Autowired
     private DbService service;
 
@@ -38,6 +41,7 @@ public class TaskController{
     //public TaskDto updateTask(TaskDto taskDto) {
       //  return new TaskDto(1L, "Edited test title", "Test_content");
     //}
+
 
     @RequestMapping(method = RequestMethod.POST, value = "createTask")
     public void createTask(TaskDto taskDto) {
