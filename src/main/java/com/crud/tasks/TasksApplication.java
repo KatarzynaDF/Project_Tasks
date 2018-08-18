@@ -10,8 +10,6 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-
-
 public class TasksApplication{
 
     public static void main(String[] args) {
