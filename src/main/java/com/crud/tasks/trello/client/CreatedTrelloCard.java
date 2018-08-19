@@ -22,14 +22,14 @@ public class CreatedTrelloCard {
     @JsonProperty("shortUrl")
     private String shortUrl;
 
-    @JsonProperty ("votes")
-    private int votes;
+   // @JsonProperty ("votes")
+    //private int votes;
 
-    @JsonProperty("board")
-    int board;
+   // @JsonProperty("board")
+   // int board;
 
-    @JsonProperty("card")
-    int card;
+   // @JsonProperty("card")
+    //int card;
 
 
 }
