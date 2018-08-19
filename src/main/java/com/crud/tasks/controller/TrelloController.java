@@ -15,7 +15,7 @@ import java.util.logging.Logger;
 
 import static java.util.Optional.ofNullable;
 
-
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/v1/trello")
 public class TrelloController {
