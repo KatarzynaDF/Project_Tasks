@@ -3,6 +3,7 @@ package com.crud.tasks.controller;
 
 import com.crud.tasks.domain.TrelloBoardDto;
 import com.crud.tasks.domain.TrelloCardDto;
+import com.crud.tasks.service.TrelloService;
 import com.crud.tasks.trello.client.CreatedTrelloCard;
 import com.crud.tasks.trello.client.TrelloClient;
 import org.slf4j.LoggerFactory;
@@ -20,21 +21,18 @@ import static java.util.Optional.ofNullable;
 @RequestMapping("/v1/trello")
 public class TrelloController {
 
-
     @Autowired
-    private TrelloClient trelloClient;
+    private TrelloService trelloService;
 
-    @RequestMapping(method = RequestMethod.GET, value = "getTrelloBoards")
+    @RequestMapping(method = RequestMethod.GET, value = "/getTrelloBoards")
     public List<TrelloBoardDto> getTrelloBoards() {
-
-        return trelloClient.getTrelloBoards();
+        return trelloService.fetchTrelloBoards();
 
     }
 
-    @RequestMapping(method =RequestMethod.POST, value = "createTrelloCard")
+    @RequestMapping(method =RequestMethod.POST, value = "/createTrelloCard")
     public CreatedTrelloCard createTrelloCard(@RequestBody TrelloCardDto trelloCardDto) {
-
-      return trelloClient. createNewCard(trelloCardDto);
+      return trelloService.createdTrelloCard(trelloCardDto);
     }
 
 }
